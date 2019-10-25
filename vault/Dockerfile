@@ -25,6 +25,6 @@ COPY ./config/vault-config.json /vault/config/vault-config.json
 # Exposition du port 8200
 EXPOSE 8200
 
-# run vault
+# Démarrage de vault
 ENTRYPOINT ["vault"]
 
