@@ -1,10 +1,11 @@
-# Création cluster 
+# Cluster vault consul
+
 * 3 containers consul et 1 container vault
 
-## Application vault exposée sur le port 80
+### Application vault exposée sur le port 80
 * `http://0.0.0.0`
 
-## Changement du port dans docker-compose.yml
+### Changement du port dans docker-compose.yml
 ```
 vault:
     build:
@@ -13,7 +14,7 @@ vault:
     ports:
       - 80:8200
 ```
-## Application consul exposée sur le port 8080
+### Application consul exposée sur le port 8080
 * `http://0.0.0.0:8080/ui`
 ## Changement du port dans docker-compose.yml
 ```
@@ -24,7 +25,7 @@ consul:
     ports:
       - 8080:8500
 ```
-# Init
+## Init
 ```
 docker-compose exec vault bash
 vault operator init
