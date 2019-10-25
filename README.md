@@ -1,9 +1,9 @@
-# Cluster vault consul
+# Cluster vault consul avec docker-compose
 
 * 3 containers consul et 1 container vault
 
 ### Application vault exposée sur le port 80
-* `http://0.0.0.0`
+* `http://0.0.0.0:80`
 
 ### Changement du port dans docker-compose.yml
 ```
@@ -16,7 +16,7 @@ vault:
 ```
 ### Application consul exposée sur le port 8080
 * `http://0.0.0.0:8080/ui`
-## Changement du port dans docker-compose.yml
+### Changement du port dans docker-compose.yml
 ```
 consul:
     build:
