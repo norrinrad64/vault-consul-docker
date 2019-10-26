@@ -1,6 +1,12 @@
 # Cluster vault consul avec docker-compose
-
 * 3 containers consul et 1 container vault
+
+## Clone du repo
+```
+cd vault-consul-docker
+docker-compose up -d --build
+docker-compose logs -f
+```
 
 ### Application vault exposée sur le port 80
 * `http://0.0.0.0:80`
@@ -30,4 +36,11 @@ consul:
 docker-compose exec vault bash
 vault operator init
 vault operator unseal
+vault audit enable file file_path=/vault/logs/audit.log
+```
+
+## Nouvelle connexion
+```
+docker-compose exec vault bash
+vault login <TOKEN>
 ```
