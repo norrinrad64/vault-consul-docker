@@ -37,6 +37,7 @@ consul:
 docker-compose exec vault bash
 vault operator init
 vault operator unseal = A lancer 3 fois avec 3 Unseal Key différents
+vault login s.xxxxxxxxxxxxxxxxxxxxxx
 vault audit enable file file_path=/vault/logs/audit.log
 ```
 

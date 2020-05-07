@@ -2,7 +2,7 @@
 FROM alpine:latest
 
 # Version de consul : https://releases.hashicorp.com/consul
-ENV CONSUL_VERSION 1.6.1
+ENV CONSUL_VERSION 1.7.3
 
 # Dossier consul
 RUN mkdir /consul

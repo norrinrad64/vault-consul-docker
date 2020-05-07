@@ -2,7 +2,7 @@
 FROM alpine:latest
 
 # Version de vault https://releases.hashicorp.com/vault
-ENV VAULT_VERSION 1.2.3
+ENV VAULT_VERSION 1.4.1
 
 # Dossier vault
 RUN mkdir /vault
