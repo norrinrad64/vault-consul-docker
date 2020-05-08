@@ -1,4 +1,4 @@
-# Cluster vault consul avec docker-compose
+## Cluster vault consul avec docker-compose
 * 3 containers consul ( Cluster pour le backend ) et 1 container vault
 
 ## Clone du repo
@@ -16,9 +16,9 @@ vault:
       - 8080:8200
 ```
 
-## Application vault exposée sur le port 8080 : `http://<IP>:8080`
+### Application vault exposée sur le port 8080 : `http://<IP>:8080`
 
-## Consul : Changement du port dans docker-compose.yml
+### Consul : Changement du port dans docker-compose.yml
 ```
 consul:
     build:
@@ -35,7 +35,7 @@ cd vault-consul-docker
 docker-compose up -d --build
 docker-compose logs -f
 ```
-## Init
+### Init
 ```
 docker-compose exec vault bash
 vault operator init
